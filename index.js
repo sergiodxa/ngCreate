@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 var program = require('commander');
-var colors  = require('colors');
 
 // Create module
 var ngModule = require('./lib/ng-module');
 var ngController = require('./lib/ng-controller');
+var ngDirective = require('./lib/ng-directive');
 
 program
   .version('0.0.0')
@@ -23,8 +23,9 @@ program
   .action(ngController);
 
 // Create directive
-// program
-//   .command('directive')
-//   .description('Create a directive for specified module')
+program
+  .command('directive')
+  .description('Create a directive for specified module')
+  .action(ngDirective);
 
 program.parse(process.argv);
