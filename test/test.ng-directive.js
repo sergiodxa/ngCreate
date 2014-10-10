@@ -10,7 +10,8 @@ describe('Create a new AngularJS\'s controller', function () {
     template: 'test.html',
     description: 'Test directive'
   }
-  var result = "/**\n *\n * Test Module\n * Module description\n *\n */\n(function() {\n\t\"use stric\";\n\tangular.module('Test', [])\n\t\t.directive('TestDirective', [function () {\n\t\t\t/**\n\t\t\t *\n\t\t\t * TestDirective Directive\n\t\t\t * Test directive\n\t\t\t *\n\t\t\t */\n\t\t\treturn {\n\t\t\t\tname: 'TestDirective',\n\t\t\t\tcontroller: TestCtrl,\n\t\t\t\treplace: true\n\t\t\t\trestrict: 'E',\n\t\t\t\ttemplateUrl: 'test.html',\n\t\t\t\ttransclude: true\n\t\t\t};\n\t\t}])\n})();";
+
+  var result = fs.readFileSync('test/templates/directive.js', 'utf8');
 
   it('Complete: should return true', function () {
     expect(ngDirective(null, directive))

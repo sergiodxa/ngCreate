@@ -8,7 +8,8 @@ describe('Create a new AngularJS\'s controller', function () {
     dependencies: '$scope, $rootParams',
     description: 'Test controller'
   }
-  var result = "/**\n *\n * Test Module\n * Module description\n *\n */\n(function() {\n\t\"use stric\";\n\tangular.module('Test', [])\n\t\t.controller('TestCtrl', ['$scope', '$rootParams', function ($scope, $rootParams) {\n\t\t\t/**\n\t\t\t *\n\t\t\t * TestCtrl Controller\n\t\t\t * Test controller\n\t\t\t *\n\t\t\t */\n\n\t\t\t// code\n\t\t}])\n})();";
+
+  var result = fs.readFileSync('test/templates/controller.js', 'utf8');
 
   it('Complete: should return true', function () {
     expect(ngController(null, controller))

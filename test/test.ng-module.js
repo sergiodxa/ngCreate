@@ -7,7 +7,8 @@ describe('Create a new AngularJS\'s module', function () {
     dependencies: 'ngRoute, ngSanitize',
     description: 'Test module'
   }
-  var result = "/**\n *\n * Test Module\n * Test module\n *\n */\n(function() {\n\t\"use stric\";\n\tangular.module('Test', ['ngRoute', 'ngSanitize'])\n})();";
+
+  var result = fs.readFileSync('test/templates/module.js', 'utf8');
 
   it('Complete: should return true', function () {
     expect(ngModule(null, module))
