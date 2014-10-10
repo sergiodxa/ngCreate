@@ -1,0 +1,32 @@
+{
+  "name": "ngCreate",
+  "version": "0.0.0",
+  "description": "CLI to create AngularJS files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index -h"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiodxa/ngCreate.git"
+  },
+  "keywords": [
+    "angular",
+    "cli"
+  ],
+  "author": "Sergio Daniel Xalambrí <sergio@xalambri.com.ar>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiodxa/ngCreate/issues"
+  },
+  "homepage": "https://github.com/sergiodxa/ngCreate",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "commander": "^2.3.0",
+    "mkpath": "^0.1.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "ng:create" : "index.js"
+  }
+}
