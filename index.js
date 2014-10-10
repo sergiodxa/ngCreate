@@ -12,19 +12,19 @@ program
 
 // Create module
 program
-  .command('module [name] [dependencies] [description]')
-  .description('Create a module with the name, description and dependencies')
+  .command('module')
+  .description('Create a new AngularJS\'s module')
   .action(ngModule);
 
 // Create controller
 program
-  .command('controller [module] [name] [dependencies] [description]')
-  .description('Create a controller with the name, description and dependencies for the indicated module')
+  .command('controller')
+  .description('Create a controller for specified module')
   .action(ngController);
 
 // Create directive
-program
-  .command('directive [module] [name] [dependencies] [description]')
-  .description('Create a directive with the name, description and controller for the indicated module')
+// program
+//   .command('directive')
+//   .description('Create a directive for specified module')
 
 program.parse(process.argv);

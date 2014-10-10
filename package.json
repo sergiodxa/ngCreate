@@ -23,10 +23,12 @@
   "dependencies": {
     "colors": "^1.0.3",
     "commander": "^2.3.0",
-    "mkpath": "^0.1.0"
+    "mkpath": "^0.1.0",
+    "prompt": "^0.2.14",
+    "string": "^2.1.0"
   },
   "preferGlobal": "true",
   "bin": {
-    "ng:create" : "index.js"
+    "ng:create": "index.js"
   }
 }
