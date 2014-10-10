@@ -4,23 +4,24 @@ Opinionated CLI to create AngularJS files
 
 ## How install
 For install this CLI tool you need to write in your terminal:
+
 ```
-  sudo npm install -g ngCreate
+sudo npm install -g ngcreate
 ```
 
 ## Usage
 Once installed, you only need to do:
 
 ```
-  ng:create [options] [command]
+ng:create [options] [command]
 ```
 
 ### Options
 
 ```
-  -h, --help     output usage information
-  -V, --version  output the version number
-  --path [path]  set path to create the file
+-h, --help     output usage information
+-V, --version  output the version number
+--path [path]  set path to create the file
 ```
 
 The [path] is a string (with or without quotes) who set the relative rute where the file are going to be created, this path prevents the creation of a unique folder for the modules.
@@ -28,14 +29,14 @@ The [path] is a string (with or without quotes) who set the relative rute where 
 ### Commands
 
 ```
-  module
-    Create a new AngularJS's module
+module
+  Create a new AngularJS's module
 
-  controller
-    Create a controller for specified module
+controller
+  Create a controller for specified module
 
-  directive
-    Create a directive for specified module
+directive
+  Create a directive for specified module
 ```
 
 #### ng:create module
