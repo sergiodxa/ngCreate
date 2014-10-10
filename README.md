@@ -57,6 +57,13 @@ This command init a prompt questions about the module name and directive name, r
 
 When end check if the module exist, if not create a JS file with the module name in the path specified via options or in './front/modules/:module' where :module is the module name and put the directive in that file, else if exist added the directive at the end.
 
+## Test
+To run test you need to write in the terminal:
+
+```
+npm test
+```
+
 ## License
 The MIT License (MIT)
 

@@ -1,10 +1,10 @@
 {
   "name": "ngcreate",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Opinionated CLI to create AngularJS files",
   "main": "index.js",
   "scripts": {
-    "start": "node index -h"
+    "test": "mocha --ui bdd --reporter spec -r test/helpers/setup -w -G"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,11 @@
     "mkpath": "^0.1.0",
     "prompt": "^0.2.14",
     "string": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "chai-as-promised": "^4.1.1",
+    "mocha": "^1.21.4"
   },
   "preferGlobal": "true",
   "bin": {
