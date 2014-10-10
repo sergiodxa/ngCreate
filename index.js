@@ -3,6 +3,7 @@ var program = require('commander');
 var prompt = require('prompt');
 
 // Create module
+var ngApp = require('./lib/ng-app');
 var ngModule = require('./lib/ng-module');
 var ngController = require('./lib/ng-controller');
 var ngDirective = require('./lib/ng-directive');
@@ -117,14 +118,14 @@ program
           description: 'Assigned controller',
           type: 'string',
           pattern: /^[a-zA-Z\s\-\.]+$/,
-          message: 'Name must be only letters, spaces, or dashes',
+          message: 'Controller must be only letters, spaces, or dashes',
           required: true
         },
         template: {
           description: 'Assigned template',
           type: 'string',
           pattern: /^[a-zA-Z\s\-\.]+$/,
-          message: 'Name must be only letters, spaces, or dashes'
+          message: 'Template must be only letters, spaces, or dashes'
         },
         description: {
           description: 'Description of the directive',
@@ -135,6 +136,45 @@ program
         }
       }
     }, ngDirective);
+  });
+
+program
+  .command('route')
+  .description('Add a new route to the indicated module')
+  .action(function (){
+    prompt.start();
+    prompt.get({
+      properties: {
+        module: {
+          description: 'Module name related',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Module name must be only letters, spaces, or dashes',
+          required: true
+        },
+        route: {
+          description: 'Route',
+          type: 'string',
+          pattern: /^[a-zA-Z\:\_\/]+$/,
+          message: 'Route must be only letters, :, _ and /',
+          required: true
+        },
+        template: {
+          description: 'Route template',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Template must be only letters, spaces, or dashes',
+          required: true
+        },
+        controller: {
+          description: 'Assigned controller',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Controller must be only letters, spaces, or dashes',
+          required: false
+        }
+      }
+    }, ngRoute);
   });
 
 program.parse(process.argv);

@@ -10,7 +10,7 @@ describe('Create a new AngularJS\'s module', function () {
 
   var result = fs.readFileSync('test/templates/module.js', 'utf8');
 
-  it('Complete: should return true', function () {
+  it('should create a file and be equal to the template', function () {
     expect(ngModule(null, module))
       .to.be.true;
     expect(fs.existsSync('front/modules/test/test.js'))

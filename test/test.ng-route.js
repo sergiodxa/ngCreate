@@ -1,20 +1,18 @@
-var ngDirective = require('../lib/ng-directive.js');
+var ngRoute = require('../lib/ng-route.js');
 var fs = require('fs');
 
-describe('Create a directive for specified module', function () {
-  var directive = {
+describe('Add a new route to the indicated module', function () {
+  var route = {
     module: 'Test',
-    name: 'TestDirective',
-    restrict: 'E',
-    controller: 'TestCtrl',
-    template: 'test.html',
-    description: 'Test directive'
+    route: '/tasks/:id',
+    template: 'task-detail.html',
+    controller: 'TaskDetailCtrl'
   }
 
-  var result = fs.readFileSync('test/templates/directive.js', 'utf8');
+  var result = fs.readFileSync('test/templates/route.js', 'utf8');
 
   it('should create a file and be equal to the template', function () {
-    expect(ngDirective(null, directive))
+    expect(ngRoute(null, route))
       .to.be.true;
     expect(fs.existsSync('front/modules/test/test.js'))
       .to.be.true;
