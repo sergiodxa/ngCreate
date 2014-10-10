@@ -7,10 +7,10 @@
 			 */
 			return {
 				name: '@name',
-				controller: @controller
+				controller: @controller,
 				replace: true
 				restrict: '@restrict',
-				templateUrl: @template,
+				templateUrl: '@template',
 				transclude: true
 			};
 		}])
