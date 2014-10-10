@@ -1,4 +1,5 @@
 # ngCreate
+[![NPM](https://nodei.co/npm/ngcreate.png)](https://nodei.co/npm/ngcreate/)
 
 Opinionated CLI to create AngularJS files
 
@@ -53,3 +54,26 @@ When end check if the module exist, if not create a JS file with the module name
 This command init a prompt questions about the module name and directive name, restrict, controller, template and description.
 
 When end check if the module exist, if not create a JS file with the module name in the path specified via options or in './front/modules/:module' where :module is the module name and put the directive in that file, else if exist added the directive at the end.
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2014 Sergio Daniel Xalambrí
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

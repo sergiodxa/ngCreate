@@ -7,7 +7,7 @@ var ngController = require('./lib/ng-controller');
 var ngDirective = require('./lib/ng-directive');
 
 program
-  .version('0.3.0')
+  .version('0.3.1')
   .option('--path [path]', 'set path to create the file');
 
 // Create module
