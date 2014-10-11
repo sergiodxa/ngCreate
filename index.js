@@ -173,7 +173,7 @@ program
           type: 'string',
           pattern: /^[a-zA-Z\s\-\.]+$/,
           message: 'Controller must be only letters, spaces, or dashes',
-          required: false
+          required: true
         }
       }
     }, ngRoute);
@@ -220,7 +220,7 @@ program
           type: 'string',
           pattern: /^[a-zA-Z\s\-\.]+$/,
           message: 'Controller must be only letters, spaces, or dashes',
-          required: false
+          required: true
         }
       }
     }, ngState);
