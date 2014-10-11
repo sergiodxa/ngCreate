@@ -10,7 +10,7 @@ var ngRoute      = require(__dirname + '/lib/ng-route');
 var ngState      = require(__dirname + '/lib/ng-state');
 
 program
-  .version('0.5.1')
+  .version('0.5.2')
   .option('--path [path]', 'set path to create the file');
 
 // Create module
@@ -207,7 +207,7 @@ program
           pattern: /^[a-zA-Z\:\_\/]+$/,
           message: 'Route must be only letters, :, _ and /',
           required: true
-        }
+        },
         template: {
           description: 'State template',
           type: 'string',
