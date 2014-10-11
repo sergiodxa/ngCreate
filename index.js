@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 var program = require('commander');
-var prompt = require('prompt');
+var prompt  = require('prompt');
 
 // Create module
-var ngApp = require('./lib/ng-app');
-var ngModule = require('./lib/ng-module');
-var ngController = require('./lib/ng-controller');
-var ngDirective = require('./lib/ng-directive');
+var ngModule     = require(__dirname + '/lib/ng-module');
+var ngController = require(__dirname + '/lib/ng-controller');
+var ngDirective  = require(__dirname + '/lib/ng-directive');
+var ngRoute      = require(__dirname + '/lib/ng-route');
+var ngState      = require(__dirname + '/lib/ng-state');
 
 program
-  .version('0.4.1')
+  .version('0.5.0')
   .option('--path [path]', 'set path to create the file');
 
 // Create module
@@ -138,6 +139,7 @@ program
     }, ngDirective);
   });
 
+// Create route
 program
   .command('route')
   .description('Add a new route to the indicated module')
@@ -175,6 +177,53 @@ program
         }
       }
     }, ngRoute);
+  });
+
+// Create state
+program
+  .command('state')
+  .description('Add a new state to the indicated module')
+  .action(function (){
+    prompt.start();
+    prompt.get({
+      properties: {
+        module: {
+          description: 'Module name related',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Module name must be only letters, spaces, or dashes',
+          required: true
+        },
+        state: {
+          description: 'State',
+          type: 'string',
+          pattern: /^[a-zA-Z\:\_\/\.]+$/,
+          message: 'State must be only letters, :, _ and /',
+          required: true
+        },
+        url: {
+          description: 'Url',
+          type: 'string'
+          pattern: /^[a-zA-Z\:\_\/]+$/,
+          message: 'Route must be only letters, :, _ and /',
+          required: true
+        }
+        template: {
+          description: 'State template',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Template must be only letters, spaces, or dashes',
+          required: true
+        },
+        controller: {
+          description: 'Assigned controller',
+          type: 'string',
+          pattern: /^[a-zA-Z\s\-\.]+$/,
+          message: 'Controller must be only letters, spaces, or dashes',
+          required: false
+        }
+      }
+    }, ngState);
   });
 
 program.parse(process.argv);
