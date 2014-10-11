@@ -10,7 +10,7 @@ var ngRoute      = require(__dirname + '/lib/ng-route');
 var ngState      = require(__dirname + '/lib/ng-state');
 
 program
-  .version('0.5.4')
+  .version('0.5.5')
   .option('--path [path]', 'set path to create the file');
 
 // Create module
