@@ -24,22 +24,22 @@ program
         name: {
           description: 'Module name',
           type: 'string',
-          pattern: /^[a-zA-Z\s\-]+$/,
+          pattern: /^[a-zA-Z\s\-\.]+$/,
           message: 'Name must be only letters, spaces, or dashes',
           required: true
         },
         dependencies: {
           description: 'Module dependencies',
           type: 'string',
-          pattern: /^[a-zA-Z\,\s]+$/,
+          pattern: /^[a-zA-Z\,\s\.]+$/,
           message: 'Dependencies must be only letters and separated by coma',
           required: false
         },
         description: {
           description: 'Description of the module',
           type: 'string',
-          pattern: /^[a-zA-Z\s\-]+$/,
-          message: 'Description must be only letters, spaces, or dashes',
+          pattern: /^[a-zA-Z\s\-\.\:\;\/\_\"\']+$/,
+          message: 'Description must be only letters, spaces, dots, slash, underscore, quotes or dashes',
           required: false
         }
       }
