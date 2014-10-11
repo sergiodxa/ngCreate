@@ -1,6 +1,6 @@
 {
   "name": "ngcreate",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Opinionated CLI to create AngularJS files",
   "main": "index.js",
   "scripts": {
