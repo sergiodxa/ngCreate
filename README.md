@@ -1,5 +1,5 @@
 # ngCreate
-[![NPM](https://nodei.co/npm/ngcreate.png)](https://nodei.co/npm/ngcreate/)
+[![NPM](https://nodei.co/npm/ngCreate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngcreate/)
 
 [![dependencies](https://david-dm.org/sergiodxa/ngCreate.png)](https://david-dm.org/sergiodxa/ngCreate)
 
