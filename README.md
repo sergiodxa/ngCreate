@@ -1,7 +1,7 @@
 # ngCreate
-[![NPM](https://nodei.co/npm/ngCreate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngcreate/)
-
 [![dependencies](https://david-dm.org/sergiodxa/ngCreate.png)](https://david-dm.org/sergiodxa/ngCreate)
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Opinionated CLI to create AngularJS files
 
